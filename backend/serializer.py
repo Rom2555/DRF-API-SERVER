@@ -7,9 +7,10 @@ from backend.models import Adv
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name' ]
+        fields = ['id', 'username', 'email', 'first_name', 'last_name']
+
 
 class PostsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Adv
-        fields = ['id', 'user', 'text', 'created_at', 'updated_at',]
+        fields = ['id', 'user', 'text', 'created_at', 'updated_at', ]

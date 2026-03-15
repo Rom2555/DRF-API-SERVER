@@ -10,6 +10,7 @@ class UsersViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UsersSerializer
 
+
 class PostsViewSet(viewsets.ModelViewSet):
     queryset = Adv.objects.all()
     serializer_class = PostsSerializer
