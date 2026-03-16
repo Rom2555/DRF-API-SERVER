@@ -128,4 +128,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-CORS_ALLOWED_ORIGINS = ['http://128.71.133.210']
+CORS_ALLOWED_ORIGINS = [
+    'http://128.71.133.210',
+    'http://boroda.gq',
+]
