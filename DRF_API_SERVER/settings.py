@@ -128,7 +128,21 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-CORS_ALLOWED_ORIGINS = [
-    'http://128.71.133.210',
-    'http://boroda.gq',
+CORS_ALLOWED_ORIGINS = ['http://boroda.gq','http://localhost:8000','http://127.0.0.1:8000',]
+
+CORS_ALLOW_CREDENTIALS = True
+
+# CORS_ALLOW_ALL_ORIGINS = True
+
+# Разрешить все заголовки
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
 ]
