@@ -127,6 +127,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 # CORS_ALLOW_ALL_ORIGINS = True
 
+
 # Разрешить все заголовки
 CORS_ALLOW_HEADERS = [
     'accept',
