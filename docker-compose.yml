@@ -5,9 +5,7 @@ services:
       - "8000:8000"
     env_file:
       - .env
-    environment:
-      - CORS_ALLOW_ALL_ORIGINS=true
-      - DEBUG=1
+    # Переменные берутся из .env файла
     command: gunicorn --bind 0.0.0.0:8000 --reload DRF_API_SERVER.wsgi:application
     volumes:
       - ./db.sqlite3:/app/db.sqlite3
