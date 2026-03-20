@@ -22,7 +22,7 @@ jobs:
           context: .
           push: true
           tags: rom2555/drf-api-server:latest
-      
+       
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -34,11 +34,11 @@ jobs:
             cd /opt/drf-api
             cat > .env << 'EOF'
             DEBUG=0
-            SECRET_KEY=wb9czR7MTlivWEXyOcvDZf5KW6o12pvxsRnq4SGyBwp9tGfG9sFE1BJpB4wBYKmyYDg
+            SECRET_KEY=${{ secrets.SECRET_KEY }}
             ALLOWED_HOSTS=localhost,127.0.0.1,boroda.gq
             POSTGRES_DB=drfapi
             POSTGRES_USER=postgres
-            POSTGRES_PASSWORD=postgres
+            POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
             POSTGRES_HOST=db
             POSTGRES_PORT=5432
             EOF
